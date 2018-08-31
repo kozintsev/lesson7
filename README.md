@@ -2,23 +2,25 @@
 
 Необходимо выбрать кейс для тестирования, среди следующих Freamwork'ов и Web-серверов.
 
-Phalcon PHP
-Laravel
-Yii2
-Lumen laravel
-Symfony
+- Phalcon PHP
+- Laravel
+- Yii2
+- Lumen laravel
+- Symfony
 
-Apache-mod_cgi-Yii2.md
-Nginx-php-fpm-IP/TCP-Laravel.md
+Пример файла с исслежованием:
 
-Apache
-	mod_cgi
-	mod_php
-	mod_fastcgi
-Nginx
-	php-cgi
-	php-fpm Unix Socket
-	php-fpm IP/TCP
+- Apache-mod_cgi-Yii2.md
+- Nginx-php-fpm-IP/TCP-Laravel.md
+
+* Apache
+	+ mod_cgi
+	+ mod_php
+	+ mod_fastcgi
+* Nginx
+	+ php-cgi
+	+ php-fpm Unix Socket
+	+ php-fpm IP/TCP
 
 Создать docker образ для своего кейса и выложить в папку Reserach
 
