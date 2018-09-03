@@ -1,0 +1,19 @@
+version: '2'
+services:
+  nginx:
+    build: ./docker-src/nginx
+    ports:
+    - "8080:80"
+    volumes:
+    - ./app:/var/www/app
+    links:
+    - php
+  php:
+    build: ./docker-src/php
+    volumes:
+    - ./app:/var/www/app
+  app:
+    build: ./docker-src/app
+    command: sh /install.sh
+    volumes:
+    - ./app:/var/www/app
