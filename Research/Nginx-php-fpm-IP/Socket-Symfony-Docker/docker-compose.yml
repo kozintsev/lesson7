@@ -1,0 +1,26 @@
+version: "2.0"
+services:
+  php:
+    restart: always
+    build:
+      context: ./docker/php/
+      dockerfile: Dockerfile
+    volumes:
+        - ./app:/var/app
+        - ./docker/php/zz-docker.conf:/usr/local/etc/php-fpm.d/zz-docker.conf
+        - "phpsocket:/var/run"
+  nginx:
+      image: nginx:latest
+      ports:
+          - "8000:80"
+          - "4430:443"
+      volumes:
+          - ./docker/nginx/config:/etc/nginx/conf.d
+          - ./log/nginx:/var/log/nginx
+          - ./app:/var/app
+          - "phpsocket:/var/run"
+      links:
+          - php
+
+volumes:
+    phpsocket:
