@@ -1,0 +1,3 @@
+.idea
+vendor
+src/nginx/logs/*.log
