@@ -1,6 +1,15 @@
 # test environment for lesson7
 docker compose, php-fpm 7.2, nginx 1.15.5 and lumen 5.7.1
 
+# cpu spec
+
+```
+Intel Core i7-7700HQ, 32GB RAM DDR4
+```
+
+# commands
+
+
 ```
 docker-compose up
 ab -n 1000 -c 100 http://localhost/
